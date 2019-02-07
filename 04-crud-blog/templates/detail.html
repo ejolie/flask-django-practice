@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <div>
+            <h2 class="card-title">{{ data[1] }}</h2>
+            <h5 class="card-subtitle mb-2 text-muted">{{ data[4] }}</h4>
+            <p class="card-text">{{ data[2] }}</p>
+        </div>
+        <div class="mt-5 mb-2 ml-1 row">
+            <a class="card-link" href="/articles" role="button">목록</a>
+            <a class="card-link" href="/articles/{{ data[0] }}/edit" role="button">수정</a>
+            <a class="card-link" href="/articles/{{ data[0] }}/delete" role="button">삭제</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

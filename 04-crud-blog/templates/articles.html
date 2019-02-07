@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block content %}
+  <div class="container d-flex justify-content-end mb-3">
+      <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('new') }}">글쓰기</a>      
+  </div>
+  <div class="list-group">
+    {% for row in data %}
+      <a href="/articles/{{ row[0] }}" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{ row[1] }}</h5>
+          <small>{{ row[3] }}</small>
+        </div>
+        <!-- <small>{{ row[4] }}</small> -->
+        <p class="mb-1">{{ row[2] }}</p>
+      </a>
+    {% endfor %}
+  </div>
+{% endblock %}

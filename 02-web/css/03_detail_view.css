@@ -1,0 +1,174 @@
+/* Reset */
+html {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f1f3f5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.collapse.navbar-collapse { /* 오른쪽 정렬 */
+    justify-content: flex-end;
+}
+
+.navbar-brand, .footer-brand {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+.nav-item {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px; 
+    line-height: 1.8;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Header - cover */
+#cover {
+    display: flex;
+    padding-top: 40px;
+    height: 350px;
+    width: 100%;
+    background-image: url('http://www.filmmonthly.com/wp-content/uploads/2014/11/mood_indigo.jpg');
+    background-size: cover;
+    background-position: center center;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-title {
+    font-size: 2.3rem;
+    font-weight: 100;
+    line-height: 1.4;
+    text-align: center;
+    color: white;
+    letter-spacing: -1px;
+}
+
+/* Movie */
+#movie {
+    background-color: #f1f3f5;
+    padding-top: 15px;
+    padding-bottom: 150px;
+
+}
+
+.movie-subtitle {
+    margin: 3rem 0;
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+
+.movie-subtitle:after {
+    content:' ';
+    display: block;
+    position: relative;
+    width: 70px;
+    left: 90px;
+    top: 15px;
+    border: 1.5px solid #ced0d2;
+    border-radius: 4px;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.card-title {
+    font-weight: 400;
+    font-size: 18px;
+    word-break: break-all;
+}
+
+.badge.badge-pill.badge-primary {
+    background-color: #4c6ef5;
+}
+
+.badge.badge-pill.badge-secondary {
+    background-color: #68727b;
+}
+
+.badge.badge-pill.badge-info {
+    background-color: #868e96;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-text {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+/* Modal */
+.modal img {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-title {
+    font-weight: 400;
+}
+
+.modal-info h5 {
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    height: 200px;
+    width: 100%;
+    padding: 0 3rem;
+    background-color: #343A40;
+    left: 0;
+    bottom: 0;
+    color: white;
+}
+
+.footer-brand { 
+    font-size: 15px;
+}
+
+.footer-text {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.footer-title {
+    font-size: 14px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.footer-links li a {
+    color: white !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+}
+
+.arrow-icon {
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    color: white;
+}
