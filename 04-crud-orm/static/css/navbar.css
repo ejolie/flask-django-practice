@@ -1,0 +1,27 @@
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.collapse.navbar-collapse { /* 오른쪽 정렬 */
+    justify-content: flex-end;
+}
+
+.navbar-brand, .footer-brand {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+.nav-item {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px; 
+    line-height: 1.8;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

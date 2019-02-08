@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container my-5" style="width: 70%;">
+    <div class="card">
+        <img src="{{ mv.poster_url }}" class="card-img-top" style="width: 100%" alt="{{ mv.title }}"/>
+        <div class="card-body">
+            <div>
+                <h2 class="card-title">{{ mv.title }}</h2>
+                <h5 class="card-subtitle mb-2 text-muted">{{ mv.title_en }}</h4>
+            </div>
+            <div>
+                <ul>
+                    <li><strong>평점</strong> <span class="badge badge-pill badge-primary">{{ mv.score }}</span></li>
+                    <li><strong>개요</strong> {{ mv.genre }} | {{ mv.open_date }} 개봉 | {{ mv.watch_grade }}</li>
+                    <li><strong>누적관객</strong> {{ mv.audience }} 명</li>
+                </ul>
+            </div>
+            <div>
+                <p class="card-text">{{ mv.description }}</p>
+            </div>
+            <div class="mt-5 mb-2 ml-1 row">
+                <a class="card-link" href="/movies" role="button">목록</a>
+                <a class="card-link" href="/movies/{{ mv.id }}/edit" role="button">수정</a>
+                <a class="card-link" href="/movies/{{ mv.id }}/delete" role="button">삭제</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

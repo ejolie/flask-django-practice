@@ -1,0 +1,26 @@
+footer {
+    height: 200px;
+    width: 100%;
+    padding: 0 3rem;
+    background-color: #343A40;
+    left: 0;
+    bottom: 0;
+    color: white;
+}
+
+.footer-brand { 
+    font-size: 15px;
+}
+
+.footer-text {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.footer-title {
+    font-size: 14px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}

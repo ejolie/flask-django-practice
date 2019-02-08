@@ -1,0 +1,20 @@
+#cover {
+    display: flex;
+    padding-top: 40px;
+    height: 350px;
+    width: 100%;
+    background-image: url('http://www.filmmonthly.com/wp-content/uploads/2014/11/mood_indigo.jpg');
+    background-size: cover;
+    background-position: center center;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-title {
+    font-size: 2.3rem;
+    font-weight: 100;
+    line-height: 1.4;
+    text-align: center;
+    color: white;
+    letter-spacing: -1px;
+}
