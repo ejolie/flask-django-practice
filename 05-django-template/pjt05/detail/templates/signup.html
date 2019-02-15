@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="container my-4">
+    <h1 class="display-4 mb-5 text-center">Sign Up</h1>
+    <div class="row">
+        <div class="col-lg-6 mb-5">
+            <img src="{% static 'images/signup.jpg' %}" style="width: 100%;"/>
+        </div>
+        <div class="col-lg-6 mb-5">
+            <form>
+              <div class="form-group">
+                <label for="signupEmail">Email address</label>
+                <input type="email" class="form-control" id="signupEmail" name="signupEmail" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="signupPassword">Password</label>
+                <input type="password" class="form-control" id="signupPassword" name="signupPassword">
+              </div>
+              <div class="form-group">
+                <label for="signupPasswordConfirm">Password Confirm</label>
+                <input type="password" class="form-control" id="signupPasswordConfirm" name="signupPasswordConfirm">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container my-4">
+<h1 class="display-4 mb-5 text-center">Q&A</h1>
+<form method="POST">
+  <div class="form-row">
+    <div class="form-group col-md-6 col-lg-8">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" name="title">
+    </div>
+    <div class="form-group col-md-6 col-lg-4">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" name="email">
+    </div>
+  </div>
+  <div class="form-group">
+  <label for="content">Content</label>
+    <textarea class="form-control" id="content" rows="6" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}
