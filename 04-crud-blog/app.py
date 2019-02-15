@@ -9,7 +9,7 @@ app = Flask(__name__)
 # 메인 페이지
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return redirect('/articles')
     
 # 글 목록 페이지
 @app.route('/articles') 
