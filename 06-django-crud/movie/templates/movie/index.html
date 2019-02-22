@@ -1,0 +1,17 @@
+{% extends 'movie/base.html' %}
+{% load static %}
+{% block body %}
+<div class="row">
+    {% for movie in movies %}
+    <div class="col-4">
+        <div class="card bg-dark text-white">
+            <img src="{{ movie.posterurl }}" class="card-img" alt="{{ movie.title }}">
+            <div class="card-img-overlay">
+                <h5 class="card-title"><a href="{% url 'detail' movie.id %}">{{ movie.title }}</a></h5>
+                <span class="badge badge-pill badge-info">{{ movie.score }}</span>
+              </div>
+        </div>  
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
