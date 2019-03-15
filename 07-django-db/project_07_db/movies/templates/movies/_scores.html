@@ -1,0 +1,40 @@
+<h4 class="ui horizontal divider header" style="margin-bottom: 3rem;">
+    <i class="fas fa-star"></i>
+    평점
+</h4>
+<div class="ui two column left aligned grid" style="width: 70%; margin-left: 3rem; margin-right: 3rem;">
+    <div class="column">
+        <div class="ui comments">
+            {% if scores %}
+                {% for score in scores %}
+                    <div class="comment">
+                        <div class="content">
+                            <div class="text">
+                                <p>{{ score.content }}</p>
+                            </div>
+                            <div id="ReadonlyRating" class="ui star rating" data-rating="{{ score.score }}"></div>
+                            <form action="{% url 'movies:delete_score' movie.id score.id %}" method="POST"
+                                  style="display: inline-block; margin-left: 1rem;">
+                                {% csrf_token %}
+                                <button class="ui mini button" onclick="return confirm('삭제하시겠습니까?')">삭제
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <form style="margin-top: 5rem;" class="ui reply form" action="{% url 'movies:create_score' movie.id %}" method="POST">
+                {% csrf_token %}
+                <div class="field">
+                    <div id="submitRating" class="ui star rating" data-max-rating="5"></div>
+                    <label for="ratingNum" class="sr-only"></label>
+                    <input class="sr-only" id="ratingNum" name="ratingNum" type="number">
+                    <label for="content" class="sr-only">리뷰</label>
+                    <input style="margin-top: 1rem; width: 20rem;" type="text" id="content" name="content" placeholder="간단한 리뷰를 작성해주세요.">
+                </div>
+                <button class="ui primary small button" style="display: inline-block;">추가</button>
+            </form>
+        </div>
+    </div>
+</div>

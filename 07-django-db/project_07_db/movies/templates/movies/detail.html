@@ -1,0 +1,37 @@
+{% extends 'movies/base.html' %}
+{% load static %}
+{% block title %}{{ movie.title }}{% endblock %}
+{% block is_movie %}active{% endblock %}
+{% block body %}
+    <div class="ui two column centered grid">
+        <div class="ui fluid image column" style="width: 50%;">
+            <div class="ui {{ color }} ribbon label">
+                <i class="fas fa-quote-left"></i> {{ movie.genre.name }}
+            </div>
+            <img src="{{ movie.poster_url }}">
+        </div>
+    </div>
+    <div class="ui text main container" style="width: 70%; margin-top: 2rem; margin-left: 3rem; margin-right: 3rem;">
+        <h1 class="ui center aligned header">{{ movie.title }}</h1>
+        <h4><i class="fas fa-users"></i> {{ movie.audience }}명</h4>
+        <p>{{ movie.description }}</p>
+    </div>
+    <!-- Comments start -->
+    <div class="ui container" style="margin-top: 5rem; margin-bottom: 5rem;">
+        {% include 'movies/_scores.html' %}
+    </div>
+    <!-- Comments end -->
+    <!-- Buttons start -->
+    <div style="margin-top: 3rem; margin-bottom: 5rem;">
+        <a href="{% url 'movies:movie_list' %}">
+            <button class="ui primary small button">목록</button>
+            <a>
+                <button class="ui small button">수정</button>
+                <form style="display: inline-block" action="{% url 'movies:delete_movie' movie.id %}" method="POST">
+                    {% csrf_token %}
+                    <button class="ui small button" onclick="return confirm('삭제하시겠습니까?')">삭제</button>
+                </form>
+    </div>
+    <!-- Buttons end -->
+    <script src="{% static 'js/score.js' %}" type="text/javascript"></script>
+{% endblock %}
