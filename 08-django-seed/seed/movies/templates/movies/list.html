@@ -1,0 +1,21 @@
+{% extends 'movies/base.html' %}
+{% load static %}
+{% block is_home %}active{% endblock %}
+{% block content %}
+<div class="text-right mb-3">
+  <a href="{% url 'movies:create_movie' %}">
+      <button class="btn btn-outline-success" type="submit">영화 추가</button>
+  </a>
+</div>
+<div class="text-center">
+  <div class="card-columns">
+    {% for movie in movies %}
+    <div class="card">
+      <a href="{% url 'movies:movie_detail' movie.id %}">
+        <img src="{{ movie.poster_url }}" class="card-img-top" alt="{{ movie.title }}">
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

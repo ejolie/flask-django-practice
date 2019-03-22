@@ -1,0 +1,38 @@
+{% extends 'movies/base.html' %}
+{% block is_movie %}active{% endblock %}
+{% block content %}
+<div class="text-center col-6 offset-4">
+  <h1 class="display-4">{{ movie.title }}</h1>
+  <img src="{{ movie.poster_url }}" style="max-width: 80%;" class="rounded my-4" alt="{{ movie.title }}">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item lead">{{ movie.audience }}명</li>
+    <li class="list-group-item lead">{{ movie.genre.name }}</li>
+    <li class="list-group-item lead"><p>{{ movie.description}}</p></li>
+  </ul>
+  <div class="text-left my-3">
+    <a href="{% url 'movies:update_movie' movie.id %}">
+      <button class="btn btn-sm btn-outline-secondary" type="submit">수정</button>
+    </a>
+    <a href="{% url 'movies:delete_movie' movie.id %}">
+      <button class="btn btn-sm btn-outline-secondary" type="submit">삭제</button>
+    </a>
+    <a href="{% url 'movies:create_score' movie.id %}">
+      <button class="btn btn-sm btn-outline-success" type="submit">평점 추가</button>
+    </a>
+  </div>
+  <div class="my-3 p-3 bg-white rounded text-left shadow-sm">
+    <h6 class="border-bottom border-gray pb-2 mb-0">평점</h6>
+    {% for score in scores %}
+    <div class="media text-muted pt-3">
+      <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <strong class="text-gray-dark">{{ score.content }}</strong>
+        </div>
+        <span class="d-block">{{ score.score }}점</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

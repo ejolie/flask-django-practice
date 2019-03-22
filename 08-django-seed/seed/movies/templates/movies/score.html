@@ -1,0 +1,11 @@
+{% extends 'movies/base.html' %}
+{% block content %}
+<h1 class="text-center display-4">평점 추가</h1>
+<div class="mt-4 col-4 offset-4">
+  <form method="POST" action="{% url 'movies:create_score' movie.id %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+  <input type="submit" class="btn btn-outline-success">
+  </form>
+</div>
+{% endblock %}
