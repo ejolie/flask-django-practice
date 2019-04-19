@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+
+{% block body %}
+  <h1 class="display-4 text-center mb-5">
+    {% if request.path == '/accounts/login/' %} 로그인
+    {% else %} 회원가입 {% endif %}
+  </h1>
+  <div class="mx-auto" style="width: 15rem;">
+    <form method="post" action="{{ request.path }}">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button class="btn btn-outline-primary">
+          {% if request.path == '/accounts/login/' %} 로그인
+          {% else %} 회원가입 {% endif %}
+        </button>
+    </form>
+  </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1 class="display-5 text-center mb-5">사용자 목록</h1>
+  <div class="list-group mx-auto" style="width: 15rem;">
+    {% for user in users %}
+    <a href="{% url 'accounts:profile' user.pk %}" class="list-group-item list-group-item-action">{{ user.username }}</a>
+    {% endfor %}
+  </div>
+{% endblock %}

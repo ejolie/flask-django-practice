@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+
+{% block body %}
+  <h1 class="display-5 text-center mb-5">{{ movie.title }}</h1>
+  <div class="card mx-auto" style="width: 30rem;">
+    <img src="{{ movie.poster_url }}" class="card-img-top" alt="{{ movie.title }}">
+    <div class="card-body my-3">
+      <p><span class="badge badge-info">{{ movie.genre }}</span>  {{ movie.audience }} 명</p>
+      <p class="card-text" style="font-weight: 300;">{{ movie.description }}</p>
+    </div>
+    <hr>
+    <div class="card-body my-2">
+      <p class="lead">평점</p>
+        {% if movie.score_set.count %}
+          {% for score in movie.score_set.all %}
+            <p>
+              <b>{{ score.user }}</b>
+              <span style="font-weight: 300;">
+                <span class="badge badge-warning">{{ score.value }}점</span>
+                {{ score.content }}
+              </span>
+              {% if user == score.user %}
+                <form method="post" action="{% url 'movies:delete_score' movie.pk score.pk %}">
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-sm btn-outline-secondary">삭제</button>
+                </form>
+              {% endif %}
+            </p>
+          {% endfor %}
+        {% else %}
+        <p>아직 평점이 없습니다.</p>
+        {% endif %}
+    </div>
+    <hr>
+    <div class="card-body mb-3">
+      <p class="lead">평점 남기기</p>
+      <form method="post" action="{% url 'movies:create_score' movie.pk %}" style="width: 20rem;">
+        {% csrf_token %}
+        {% bootstrap_form score_form %}
+        <button type="submit" class="btn btn-outline-primary">작성</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
