@@ -82,7 +82,13 @@ Create a mini CRUD blog usign Flask.
 
 ![Mini project. CRUD Blog - 블로그 메인 화면](./04-crud-blog/screenshots/1-articles.PNG)
 
+* 글 상세 조회
+
+![Mini project. CRUD Blog - 글 상세 조회](./04-crud-blog/screenshots/3-article-detail.PNG)
+
 &nbsp;
+
+
 
 ## 4. CRUD ORM
 
