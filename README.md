@@ -38,10 +38,6 @@ Create a movie portal site with the movie data processed at 1st project.
 
 ![2. Web - 메인 화면](./02-web/screenshots/full-screen.PNG)
 
-* 모달
-
-![2. Web - 모달](./02-web/screenshots/5-modal.PNG)
-
 * Footer
 
 ![2. Web - Footer](./02-web/screenshots/3-footer.PNG)
@@ -102,10 +98,6 @@ Create a movie portal site similar to 2nd project using **Flask**.
 
 ### Screenshots
 
-* 메인 화면
-
-![4. CRUD ORM - 메인 화면](./04-crud-orm/screenshots/1-movies.PNG)
-
 * 영화 수정
 
 ![4. CRUD ORM - 영화 수정](./04-crud-orm/screenshots/4-edit.PNG)
@@ -156,11 +148,7 @@ Create a CRUD movie portal site using Django.
 
 ### Screenshots
 
-- 영화 상세 정보 조회
-
-![6. Django CRUD - 영화 상세 정보 조회](./06-django-crud/screenshots/2-detail.PNG)
-
-* 영화 수정 및 삭제
+- 영화 수정 및 삭제
 
 ![6. Django CRUD - 영화 수정 및 삭제](./06-django-crud/screenshots/3-detail.PNG)
 
@@ -170,7 +158,28 @@ Create a CRUD movie portal site using Django.
 
 ## 7. Django DB
 
+Create a movie portal site usign Django ORM.
 
+
+
+### Built with
+
+* Django
+* Semantic UI
+
+
+
+### Screenshots
+
+* 메인 화면
+
+![7. Django DB - 메인 화면](./07-django-db/screenshots/1-list.PNG)
+
+
+
+* 평점 등록 및 삭제
+
+![7. Django DB - 평점](./07-django-db/screenshots/3-score.PNG)
 
 
 
@@ -178,11 +187,61 @@ Create a CRUD movie portal site using Django.
 
 ## 8. Django Seed
 
+Create a movie portal site using Django ORM.
 
+
+
+### Built with
+
+- Django
+- Bootstrap
+
+
+
+### Screenshots
+
+- 메인 화면
+
+![8. Django Seed](./08-django-seed/screenshots/1-list.PNG)
+
+
+
+* 평점 생성
+
+![8. Django Seed](./08-django-seed/screenshots/4-create-score.PNG)
 
 
 
 &nbsp;
 
 ## 9. Django M : N
+
+Create a movie portal site using Django ORM and implement signup/login/logout.
+
+
+
+### Built with
+
+- Django
+- Bootstrap
+
+
+
+### Screenshots
+
+* 로그인
+
+![9. Django M : N](./09-django-m2n/screenshots/1-login.PNG)
+
+
+
+* 평점 생성
+
+![9. Django M : N](./09-django-m2n/screenshots/4-comment.PNG)
+
+
+
+
+
+&nbsp;
 
