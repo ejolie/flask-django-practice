@@ -8,7 +8,6 @@ from django.views.decorators.http import require_http_methods, require_POST
 from .forms import UserCustomCreationForm
 from .models import User, User_Followers_User
 
-# Create your views here.
 @require_http_methods(["GET", "POST"])
 def signup(request):
     if request.user.is_authenticated:
@@ -44,6 +43,7 @@ def logout(request):
     auth_logout(request)
     return redirect('movies:list')
 
+# 유저 목록
 def list(request):
     users = User.objects.all()
     return render(request, 'accounts/list.html',{
