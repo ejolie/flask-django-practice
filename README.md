@@ -1,4 +1,4 @@
-# 🤸🏻‍♂️ Web Projects
+# 🤸🏻‍♀️ Web Projects
 
 This repository is for practice making websites with Flask, Django and Bootstrap. 
 
