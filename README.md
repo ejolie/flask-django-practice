@@ -1,6 +1,6 @@
 # 🤸🏻‍♀️ Flask, Django Practice
 
-This repository is for practice of making websites with Flask, Django and Bootstrap. 
+This is the repository to practice making websites with Flask, Django and Bootstrap. 
 
 See each project directory for details 🔍
 
